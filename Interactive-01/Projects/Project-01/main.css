@@ -7,18 +7,18 @@ body{
 	font-family: sans-serif;
 	line-height: 1.5em;
 	background:white;
-	font-size: 1em;
+	font-size: 5em;
 }
 
 h1{
 	margin: 20px;
-	font-size: 3em;
+	font-size: 4em;
 	font-style: bold;
 }
 
 .main{
 	width: 80%;
-	margin: 100px auto;
+	margin: 10px auto;
 	padding: 50px;
 }
 
