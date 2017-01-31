@@ -6,66 +6,60 @@ body{
 
 	background:white;
 }
-
 .pattern-1{
 	height: 500px;
-	/* create pattern-1 CSS here */
-	/* circle outline in black color */
-	float: left;
-	width: 100px;
-	height: 100px;
-	border: 3px dotted   #000000;
+	width: 300px;
+	height: 200px;
+	border: 1.5px dotted   #000000;
 	border-radius: 50px;
+	position: right: 200px;
 }
-
 .pattern-2{
-	height: 100%;
+	position: relative;
+	
 	/* create pattern-2 CSS here */
 	width: 100px;
 	height: 100px;
-	border: 3px dotted   #000000;
-	border-radius: 50px;
-	float: left;
+	border-radius: 40px;
+	
 }
-.circle-fill{
+.pattern-3 {
+	position: left;
+	left: 100px;
+	top: 
 	width: 100px;
 	height: 100px;
-	background: #EB9FEF;
-	border-radius: 50px;
-	float: left;
-	margin: 15px;
-}
-.circle-outline {
-	width: 100px;
-	height: 100px;
-	border: 3px dotted   #000000;
+	border: 3px dotted #000000;
 	border-radius: 50px;
 	position: absolute;
 	top: 50px;
 	left: 15px;
 }
-
-.pattern-3{	
-	height: 500px;
-	/* create pattern-3 CSS here */
-	
-}
-
 .pattern-4{
-	height: 100%;
+	width: 90px;
+	height: 20px;
+	padding-bottom: 30px;
+	background: #000000;
+	border-radius: 80px;
+	float: center;
+	margin: 40px;
 }
+.pattern-5 {
+	width: 30px;
+	height: 20px;
+	background: #000000;
+	border-radius: 80px;
+	float: right;
+	margin: 30px;
+	border: 1px dotted #000000;
+}
+.pattern-6 {
 
-.square{
-		width: 100px;
-		height: 100px;
-		background: #0000FF;
-	}
-.triangle-up {
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-bottom: 100px solid #000000;
-	float: left;
-	margin: 15px;
+	position: relative;
+	top: 10px;
+	right: 100px;
+	left: 30px;
+	height: 150px;
+	width: 300px;
+	background-color: #000000;
 }
