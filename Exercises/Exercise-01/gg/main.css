@@ -6,6 +6,96 @@ body{
 
 	background:white;
 }
+
+/*  for test1.html */
+
+.floating-box{
+	width:300px;
+	height:100px;
+	float:left;
+}
+
+.pattern-1R{
+width: 0;
+height: 0;
+border-left: 40px solid transparent;
+border-right: 10px solid transparent;
+border-bottom: 60px solid #0000ff;
+background-color: transparent;
+float: right;
+}
+.pattern-1L{
+width: 0;
+height: 0;
+border-left: 10px solid transparent;
+border-right: 40px solid transparent;
+border-bottom: 60px solid #0000ff;
+background-color: transparent;
+float: left;
+}
+
+
+/* for test2.html */
+
+.box-in-middle{
+	position:fixed;
+	left: : 200px;
+	top: 300px;
+}
+
+
+.box{
+	width:800px;
+	height:50px;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	float:left;
+}
+
+.square-thick{
+
+width: 40px;
+height: 40px;
+background: transparent;
+border:5px solid #000000;
+float:left;
+}
+
+.square-thin{
+
+width: 48px;
+height: 48px;
+background: transparent;
+border:1px solid #000000;
+float:right;
+}
+
+/* for test3.html */
+
+.indent{
+	position:absolute;
+	top:25px;
+	left:25px;
+	width: 600px;
+}
+
+
+.circle-color{
+	width: 100px;
+height: 100px;
+background:#0000ff;
+border-radius:50px;
+float: left;
+margin: 5px;
+border: 5px solid pink;
+}
+
+
+
+
+/* your old stuff */
+
 .pattern-8{
 margin-right: 12px;
 padding-bottom: 10px;
@@ -34,15 +124,6 @@ border-width: 1px 1px 1px 1px;
 border-color: #000000;
 background-color: transparent;
 float: left;
-}
-.pattern-1{
-width: 0;
-height: 0;
-border-left: 10px solid transparent;
-border-right: 40px solid transparent;
-border-bottom: 60px solid #0000ff;
-background-color: transparent;
-float: right;
 }
 .pattern-2{
 width: 0;

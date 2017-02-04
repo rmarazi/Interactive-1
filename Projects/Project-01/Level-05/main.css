@@ -14,15 +14,12 @@ h1{
 	margin: 20px;
 	font-size: 3em;
 	font-style: bold;
-}
-
-h2 {
-	text-align: center;
+	text-decoration-color: #0000ff;
 }
 
 .main{
 	width: 80%;
-	margin: 10px auto;
+	margin: 100px auto;
 	padding: 50px;
 }
 
@@ -43,12 +40,14 @@ a:link{
 a:hover{
 	text-decoration: underline;
 }
-.overall{ 
-	background-color: #00FFFF;
-	overflow: auto;
- }
-.inline{
-	float: left;
-	width: 20%;
+.circle-outline{
+
+width: 100px;
+height: 100px;
+border: 3px dotted #0000ff;
+border-radius: 50px;
+float: right: 20px;
+margin-top: 40px;
+
 }
 
