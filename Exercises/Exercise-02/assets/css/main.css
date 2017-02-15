@@ -304,7 +304,15 @@ float: bottom 20%;
 	border-color: #000000;
 	float: right 20%;
 }
-
+.circl2 {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: red;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
 
 
 
