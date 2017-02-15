@@ -152,7 +152,7 @@ border-bottom: 12px solid orange;
 -moz-border-radius: 10%;
 -webkit-border-radius: 100%;
 border-radius: 70%;
-float: bottom 20%;
+display: inline-block;
 }
 .spike1 {
 position: absolute;
@@ -168,7 +168,7 @@ border-bottom: 12px solid orange;
 -moz-border-radius: 10%;
 -webkit-border-radius: 100%;
 border-radius: 70%;
-float: left 20%;
+display: inline-block;
 }
 .spike2 {
 position: absolute;
@@ -184,7 +184,7 @@ border-bottom: 12px solid orange;
 -moz-border-radius: 10%;
 -webkit-border-radius: 100%;
 border-radius: 70%;
-float: left 20%;
+display: inline-block;
 }
 .spike3 {
 position: absolute;
@@ -200,7 +200,7 @@ border-bottom: 12px solid orange;
 -moz-border-radius: 10%;
 -webkit-border-radius: 100%;
 border-radius: 70%;
-float: left 20%;
+display: inline-block;
 }
 .spike4 {
 position: absolute;
@@ -216,7 +216,7 @@ border-bottom: 12px solid orange;
 -moz-border-radius: 10%;
 -webkit-border-radius: 100%;
 border-radius: 70%;
-float: left 20%;
+display: inline-block;
 }
 .spike5 {
 position: absolute;
@@ -232,7 +232,7 @@ border-bottom: 12px solid orange;
 -moz-border-radius: 10%;
 -webkit-border-radius: 100%;
 border-radius: 70%;
-float: left 20%;
+display: inline-block;
 }
 .spike6 {
 position: absolute;
@@ -248,7 +248,7 @@ border-bottom: 12px solid orange;
 -moz-border-radius: 10%;
 -webkit-border-radius: 100%;
 border-radius: 70%;
-float: left 20%;
+display: inline-block;
 }
 .spike7 {
 position: absolute;
@@ -264,7 +264,7 @@ border-bottom: 12px solid orange;
 -moz-border-radius: 10%;
 -webkit-border-radius: 100%;
 border-radius: 70%;
-float: left 20%;
+display: inline-block;
 }
 .spike8 {
 position: absolute;
@@ -280,7 +280,7 @@ border-bottom: 12px solid orange;
 -moz-border-radius: 10%;
 -webkit-border-radius: 100%;
 border-radius: 70%;
-float: left 20%;
+display: inline-block;
 }
 .spike9 {
 position: absolute;
@@ -296,7 +296,7 @@ border-bottom: 12px solid orange;
 -moz-border-radius: 10%;
 -webkit-border-radius: 100%;
 border-radius: 70%;
-float: bottom 20%;
+display: inline-block;
 }
 .box
 {	width: 100px;
@@ -306,6 +306,7 @@ float: bottom 20%;
 }
 .circl2 {
 	position: absolute;
+	right: 2%;
 	width: 10px;
 	height: 10px;
 	background: red;
