@@ -1,0 +1,87 @@
+@import url();
+
+/* Text
+-------------------------------------------------- */
+body {
+	background: black;
+	color: white;
+}
+
+#desktop{
+	opacity: 1;
+}
+
+#tablet, #mobile {
+	opacity: 0;
+}
+
+
+
+/* Image
+-------------------------------------------------- */
+img {
+	width: 300px;
+	border-radius: 10%;
+}
+
+
+/* iPad 
+-------------------------------------------------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+  /* text */
+
+  body {
+		background: grey;
+	}
+
+	#tablet{
+		opacity: 1;
+		color: red;
+
+	}
+
+	#desktop, #mobile {
+		opacity: 0;
+	}
+
+
+  /* image */
+  img {
+  	width: 400px;
+  	border-radius: 20%;
+  }
+
+}
+
+/* Mobile
+-------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+  /* text */
+
+  body {
+		background: white;
+		color: black;
+	}
+
+	#mobile{
+		opacity: 1;
+		color: blue;
+	}
+
+	#desktop, #tablet {
+		opacity: 0;
+	}
+
+  /* image */
+  img {
+  	width: 100%;
+  	border-radius: 50%;
+
+  }
+
+}
+
+
