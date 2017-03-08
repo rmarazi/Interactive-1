@@ -6,3 +6,9 @@ body{
 	border-color: white;
 	border-width: 3px;
 }
+.borderbox{
+	width: 20px;
+	height: 30px;
+	border-color: black;
+	border-width: 1px;
+}
