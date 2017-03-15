@@ -23,7 +23,7 @@ function windowResized(){
 }
 
 function shuffleNames() {
-	var names=["10 knee crunches", "10 cross crunches", "12 leg raises", "20 cycling crunches", "20 flutter kicks", "10 heel touches","60sec elbow plank","10 russian twists"];
+	var names=["#1: 2 sets of 10","#2: 2 sets of 8","#3: 3 sets of 8","#4: 2 sets of 8","#5: 3 sets of 12","#6: 4 sets of 12","#7: 2 sets of 15/30 seconds","#8: 4 sets of 10 eachside"];
 	var name = random(names);
 	textAlign(CENTER);
 	textSize(25);
