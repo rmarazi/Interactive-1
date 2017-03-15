@@ -23,7 +23,7 @@ function windowResized(){
 }
 
 function shuffleNames() {
-	var names=["peck fly: 3 sets of 15", "incline dumbell presses: 4 sets of 10", "peck machine: 3 sets of 10"];
+	var names=["#1: 4 sets of 8","#2: 3 sets of 14","#3: 4 sets of 12","#4: 4 sets of 11","#5: 4 sets of 12","#6: 4 sets of 20"];
 	var name = random(names);
 	textAlign(CENTER);
 	textSize(25);
