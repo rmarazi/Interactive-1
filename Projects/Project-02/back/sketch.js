@@ -23,7 +23,7 @@ function windowResized(){
 }
 
 function shuffleNames() {
-	var names=["#1: 3sets of 12", "#2: 3sets of 10", "#4: 2sets of 9", "#5: 3sets of 8"];
+	var names=["#1: 3 sets of 12", "#2: 3 sets of 10", "#4: 2 sets of 9", "#5: 3 sets of 8"];
 	var name = random(names);
 	textAlign(CENTER);
 	textSize(25);
