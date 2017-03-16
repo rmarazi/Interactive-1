@@ -1,6 +1,6 @@
 function setup() {
 	createCanvas(windowWidth,windowHeight);
-	img = createImg("../assets/bicep_pic.jpg");
+	img = createImg("../assets/ab_pic.jpg");
 	image(img, 0, 0, windowWidth/2, windowHeight);
 }
 
@@ -21,6 +21,7 @@ function draw() {
 function windowResized(){
 	resizeCanvas(windowWidth, windowHeight);
 }
+
 	var names=["#1: 4 sets of 20","#2: 3 sets of 12","#3: 3 sets of 10","#4: 4 sets of 12"];
 var name = random(names);
 	textAlign(CENTER);
