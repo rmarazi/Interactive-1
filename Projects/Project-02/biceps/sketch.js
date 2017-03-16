@@ -1,6 +1,6 @@
 function setup() {
 	createCanvas(windowWidth,windowHeight);
-	img = createImg("../assets/biceps_pic.jpg");
+	img = createImg("../assets/bicep_pic.jpg");
 	image(img, 0, 0, windowWidth/2, windowHeight);
 }
 
