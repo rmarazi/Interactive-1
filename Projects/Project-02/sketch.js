@@ -1,7 +1,5 @@
 function setup() {
 	createCanvas(windowWidth,windowHeight);
-	img = createImg("assets/main.jpg");
-	image(img, 0, 0, windowWidth, windowHeight);
 }
 
 function draw() {
@@ -9,7 +7,10 @@ function draw() {
 
 	removeElements();
 	
-	image(img, 0, 0, windowWidth, windowHeight);
+	var img = createImg("assets/main.jpg");
+	img.position(0,0);
+	img.size(windowWidth, windowHeight);
+
 	shuffleNames();
 
 	var shuffle = createButton("Shuffle");
