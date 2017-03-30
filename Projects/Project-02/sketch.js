@@ -29,6 +29,7 @@ function shuffleNames() {
 	var myLink;
 	myLink = createA( name + '/index.html', name);
 	myLink.position(width/2, height/2);
+	
 
 }
 

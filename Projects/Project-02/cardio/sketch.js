@@ -30,7 +30,7 @@ function shuffleNames() {
 	var names=["#1", "#2", "#3", "#4", "#5: 20min","#5: 300calories","#6: jog 4 min","#7: 2min"];
 	var name = random(names);
 	textAlign(CENTER);
-	textSize(30);
+	textSize(40);
 	fill(255,255,255);
 	text(name, width*4/5, height/1.9);
 }

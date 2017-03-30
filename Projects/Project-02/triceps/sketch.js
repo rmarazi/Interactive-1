@@ -30,7 +30,7 @@ function shuffleNames() {
 	var names=["#1: 3 sets of 5","#2: 3 sets of 10","#3: 3 sets of 12","#4: 3 sets of 8"];
 	var name = random(names);
 	textAlign(CENTER);
-	textSize(30);
+	textSize(40);
 	fill(255,255,255);
 	text(name, width*4/5, height/1.9);
 }
