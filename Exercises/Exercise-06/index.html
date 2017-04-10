@@ -1,15 +1,245 @@
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=">
-	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  		<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 
-<style>
-</style>
+  		<style>
+  			#draggable, #zin, #zout, #zhelp{ 
+  				width: 100px;
+  				height: 100px;
+  				padding: 1em;
+          background-color: #0000ff;
+          font-style: sans-serif;
+          color: #ffffff;
+          float:left;
+  			 }
 
-</head>
-<body>
-	
-</body>
+         #droppable{
+          float: right;
+          width: 300px;
+          height: 250px;
+          padding: 0.5em;
+          background-color: #ffffff;
+          border: #000000 1px solid;
+          font-style: sans-serif;
+          color: #000000;
+         }
 
-</html>
+         #zin:hover{
+         	cursor: -webkit-zoom-in;
+          cursor: zoom-in;
+          
+         }
+
+         #zout:hover{
+         	cursor: -webkit-zoom-out;
+          cursor: zoom-out;
+          
+         }
+
+         #zhelp:hover{
+         	cursor: help;
+
+         }
+
+         .zoomin{
+         	font-size: 1.5em;
+         }
+
+         .zoomout{
+         	font-size: 0.75em;
+         }
+
+         .help { 
+          font-size: 1em;
+        }
+
+         #placeCards {
+          position: fixed;
+          top: 30%;
+         }
+
+         #cardSlots {
+					 margin: 50px auto 0 auto;
+					 background: #ddf;
+				 }
+
+         #cardSlots div, #cardPile div {
+         	float: left;
+  				width: 58px;
+  				height: 78px;
+  				padding: 10px;
+  				padding-top: 40px;
+  			  padding-bottom: 0;
+				  border: 2px solid #333;
+				  -moz-border-radius: 10px;
+				  -webkit-border-radius: 10px;
+				  border-radius: 10px;
+				  margin: 0 0 0 10px;
+				  background: #fff;
+         }
+
+         #cardSlots div {
+         	border-style: dashed;
+          font-size: 0.65em;
+         }
+					
+				#cardPile {
+  				margin: 0 auto;
+  				background: #ffd;
+
+				}
+				
+				#cardPile div {
+					width: 40px;
+         	height: 50px;
+					background: #666;
+					color: #fff;
+					font-size: 50px;
+					text-shadow: 0 0 3px #000;
+          font-size: 0.65em;
+				}
+
+        #cardSlots {
+          float: right;
+        }
+
+				#cardSlots, #cardPile {
+				  width: 300px;
+				  height: 120px;
+				  padding: 20px;
+				  border: 2px solid #333;
+				  -moz-border-radius: 10px;
+				  -webkit-border-radius: 10px;
+				  border-radius: 10px;
+				  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+				  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+				  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+				}
+
+				#pile1, #pile2, #pile3:hover {
+					cursor: move;
+
+				}
+
+				#pile1.cardInPlace { background: red; }
+
+				#pile2.cardInPlace { background: brown; }
+				#pile3.cardInPlace { background: orange; }
+
+  		</style>
+
+
+	</head>
+
+	<body>
+
+		<div id="draggable" class="ui-widget-content">
+			<p> Drag me </p>
+		</div>
+
+		<div id="zin" class="ui-widget-content">
+    <p>Zoom in!</p>
+		</div>
+
+		<div id="zout" class="ui-widget-content">
+			<p>Zoom out! </p>
+		</div>
+
+		<div id="zhelp" class="ui-widget-content">
+			<p>Panic! </p>
+		</div>
+
+    <div id= "droppable" class="ui-widget-header">
+      <div id="dhelp" style="display:none;">
+        <p style="background: yellow;">Drop Zoom in and Zoom out buttons to play with text size</p>
+      </div>
+      <br>tonight we are victorious
+      <br>champagne pouring over us
+      <br>all my friends are glorious
+    </div>
+
+    <div id="placeCards">
+      <div id="cardPile">
+      	<div id="pile3">
+      	 all my friends are glorious
+      	</div>
+      	<div id="pile1">
+      	tonight we are victorious
+      	</div>
+      	<div id="pile2">
+      	champagne pouring over us
+      	</div>
+      </div>
+
+      <div id="cardSlots">
+      	<div id="slot1">
+      	line one
+      	</div>
+      	<div id="slot2">
+      	line two
+      	</div>
+        <div id="slot3">
+      	line three
+      	</div>
+      </div>
+    </div>
+
+
+    <script>
+
+      $(function(){
+        $('#draggable').draggable();
+        $('#zin').draggable({ revert: "valid" });
+        $('#zout').draggable({ revert: "valid" });
+        $('#zhelp').draggable({ revert: "valid" });
+        $('#droppable').droppable({
+          accept: '#zin, #zout, #zhelp',
+          drop: function(event, ui){
+            if (ui.draggable.attr('id') === "zin") {
+              $(this)
+              .removeClass("help")
+              .removeClass("zoomout")
+              .addClass("zoomin");
+              $("#dhelp").hide();
+            }
+            else if (ui.draggable.attr('id') === "zout") {
+              $(this)
+              .removeClass("help")
+              .removeClass("zoomin")
+              .addClass("zoomout");
+              $("#dhelp").hide();
+            }
+            else {
+              $("#dhelp").show();
+              $(this).addClass("help");
+            }
+          }
+        });
+
+
+        // Place cards correctly
+        $("#pile1").draggable();
+        $("#pile2").draggable();
+        $("#pile3").draggable();
+        $("#slot1, #slot2, #slot3").droppable({
+          tolerance: 'fit',
+          accept: "#pile1, #pile2, #pile3",
+          drop: function(event, ui){
+            var slotNumber = $(this).attr( 'id' ).substr(-1);
+            var cardNumber = ui.draggable.attr( 'id' ).substr(-1);
+            if (slotNumber === cardNumber) {
+              ui.draggable.addClass( 'cardInPlace' );
+              ui.draggable.draggable('disable');
+              $(this).droppable('disable');
+            }
+          }
+        });
+      });
+
+    </script>
+	</body>
+</html
