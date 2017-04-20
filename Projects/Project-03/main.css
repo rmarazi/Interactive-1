@@ -1,0 +1,26 @@
+body{
+	padding: 0;
+	margin: 0;
+	justify-content: center;
+	align-items: center;
+	border-color: white;
+	border-width: 4px;
+}
+
+a {
+	font-size: 3.4em;
+	font-family: impact;
+}
+
+button {
+	font-size: 2.0em;
+	font-family: impact;
+}
+
+#owm-data {
+	position: relative;
+	top: 55%;
+	left: 35%;
+	width: 300;
+	background-color: yellow;
+	}
