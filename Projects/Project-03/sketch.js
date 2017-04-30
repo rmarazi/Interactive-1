@@ -352,7 +352,7 @@ function mousePressed() {
 function updateWeather() {
 	
 	var api_key = '33fbebc38bb57a0047be5baeb2d3581f';
-	$('#owm-data').load('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&mode=html&units=imperial&appid=' + api_key);
+	$('#owm-data').load('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&mode=html&units=imperial&appid=' + api_key);
 }
 
 
