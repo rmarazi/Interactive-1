@@ -13,9 +13,9 @@ function draw() {
 		y: radius,
 		r: radius,
 		display: function () {
-			fill('orange');
+			fill('red');
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
-			fill("teal");
+			fill("white");
 			textSize(20);
 			textAlign(CENTER);
 			text("Boston", this.x, this.y);
@@ -35,9 +35,9 @@ function draw() {
 		y: windowHeight/2,
 		r: radius,
 		display: function () {
-			fill("teal");
-			ellipse(this.x, this.y, 2*this.r, 2*this.r);
 			fill("yellow");
+			ellipse(this.x, this.y, 2*this.r, 2*this.r);
+			fill("black");
 			textSize(20);
 			textAlign(CENTER);
 			text("Portland", this.x, this.y);
@@ -57,9 +57,9 @@ function draw() {
 		y: windowHeight-radius,
 		r: radius,
 		display: function () {
-			fill("yellow");
+			fill("blue");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
-			fill("green");
+			fill("white");
 			textSize(20);
 			textAlign(CENTER);
 			text("New York", this.x, this.y);
@@ -79,9 +79,9 @@ function draw() {
 		y: windowHeight/2,
 		r: radius,
 		display: function () {
-			fill("green");
+			fill("tan");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
-			fill("red");
+			fill("white");
 			textSize(20);
 			textAlign(CENTER);
 			text("Austin", this.x, this.y);
@@ -101,9 +101,9 @@ function draw() {
 		y: windowHeight/4-radius,
 		r: radius,
 		display: function () {
-			fill("teal");
+			fill("orange");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
-			fill("yellow");
+			fill("white");
 			textSize(20);
 			textAlign(CENTER);
 			text("Denver", this.x, this.y);
@@ -123,9 +123,9 @@ function draw() {
 		y: windowHeight/4-radius,
 		r: radius,
 		display: function () {
-			fill("teal");
+			fill("grey");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
-			fill("yellow");
+			fill("white");
 			textSize(20);
 			textAlign(CENTER);
 			text("New Orleans", this.x, this.y);
@@ -145,9 +145,9 @@ function draw() {
 		y: windowHeight*3/4+radius,
 		r: radius,
 		display: function () {
-			fill("teal");
+			fill("green");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
-			fill("yellow");
+			fill("white");
 			textSize(20);
 			textAlign(CENTER);
 			text("Toronto", this.x, this.y);
@@ -167,9 +167,9 @@ function draw() {
 		y: windowHeight*3/4+radius,
 		r: radius,
 		display: function () {
-			fill("teal");
+			fill("purple");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
-			fill("yellow");
+			fill("white");
 			textSize(20);
 			textAlign(CENTER);
 			text("Ann Arbor", this.x, this.y);
@@ -216,6 +216,7 @@ function mousePressed() {
 	
 
 function updateWeather() {
+	
 	var api_key = '33fbebc38bb57a0047be5baeb2d3581f';
 	$('#owm-data').load('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&mode=html&units=imperial&appid=' + api_key);
 }

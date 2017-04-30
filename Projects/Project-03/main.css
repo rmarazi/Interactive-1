@@ -8,8 +8,8 @@ body{
 }
 
 a {
-	font-size: 3.4em;
-	font-family: impact;
+	font-size: 4em;
+	font-family: cursive;
 }
 
 button {
@@ -23,4 +23,10 @@ button {
 	left: 35%;
 	width: 300;
 	background-color: yellow;
+	font-family: cursive;
 	}
+
+.shape {
+	position: relative;
+	fill: red;
+}
