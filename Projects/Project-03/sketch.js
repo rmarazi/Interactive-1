@@ -1,9 +1,12 @@
 var city = 'boston';
 var radius = 50;
 var boston, portland, newyork, austin, denver , neworleans = [];
+var startDate = new Date();
+var startTime = startDate.getTime();
 
 function setup() {
-	createCanvas (windowWidth, windowHeight);
+	canvas = createCanvas (windowWidth, windowHeight);
+	canvas.parent("sketch-holder");
 }
 
 function draw() {
@@ -12,6 +15,7 @@ function draw() {
 		x: windowWidth/2,
 		y: radius,
 		r: radius,
+		count: 0,
 		display: function () {
 			fill('red');
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
@@ -19,12 +23,23 @@ function draw() {
 			textSize(20);
 			textAlign(CENTER);
 			text("Boston", this.x, this.y);
+			if (this.count > 0)
+				text(this.count, this.x, this.y+20);
+		},
+		reset: function () {
+			fill("black");
+			ellipse(this.x, this.y, 2*this.r, 2*this.r);
+			this.r = radius;
+			this.count = 0;
+			this.display();
 		},
 		clicked: function() {
 			var d = dist(mouseX, mouseY, this.x, this.y);
 			if (d < this.r) {
 				city = 'boston';
-				this.r = this.r + 1;
+				this.count = this.count + 1;
+				if (this.r + 1 < 150)
+					this.r = this.r + 1;
 				this.display();
 			}
 		}
@@ -34,6 +49,7 @@ function draw() {
 		x: radius,
 		y: windowHeight/2,
 		r: radius,
+		count: 0,
 		display: function () {
 			fill("yellow");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
@@ -41,12 +57,23 @@ function draw() {
 			textSize(20);
 			textAlign(CENTER);
 			text("Portland", this.x, this.y);
+			if (this.count > 0)
+				text(this.count, this.x, this.y+20);
+		},
+		reset: function () {
+			fill("black");
+			ellipse(this.x, this.y, 2*this.r, 2*this.r);
+			this.r = radius;
+			this.count = 0;
+			this.display();
 		},
 		clicked: function() {
 			var d = dist(mouseX, mouseY, this.x, this.y);
 			if (d < this.r) {
 				city = 'portland';
-				this.r = this.r + 1;
+				this.count = this.count + 1;
+				if (this.r + 1 < 150)
+					this.r = this.r + 1;
 				this.display();
 			}
 		}
@@ -56,6 +83,7 @@ function draw() {
 		x: windowWidth/2,
 		y: windowHeight-radius,
 		r: radius,
+		count: 0,
 		display: function () {
 			fill("blue");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
@@ -63,12 +91,23 @@ function draw() {
 			textSize(20);
 			textAlign(CENTER);
 			text("New York", this.x, this.y);
+			if (this.count > 0)
+				text(this.count, this.x, this.y+20);
+		},
+		reset: function () {
+			fill("black");
+			ellipse(this.x, this.y, 2*this.r, 2*this.r);
+			this.r = radius;
+			this.count = 0;
+			this.display();
 		},
 		clicked: function() {
 			var d = dist(mouseX, mouseY, this.x, this.y);
 			if (d < this.r) {
 				city = 'newyork';
-				this.r = this.r + 1;
+				this.count = this.count + 1;
+				if (this.r + 1 < 150)
+					this.r = this.r + 1;
 				this.display();
 			}
 		}
@@ -78,6 +117,7 @@ function draw() {
 		x: windowWidth-radius,
 		y: windowHeight/2,
 		r: radius,
+		count: 0,
 		display: function () {
 			fill("tan");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
@@ -85,12 +125,23 @@ function draw() {
 			textSize(20);
 			textAlign(CENTER);
 			text("Austin", this.x, this.y);
+			if (this.count > 0)
+				text(this.count, this.x, this.y+20);
+		},
+		reset: function () {
+			fill("black");
+			ellipse(this.x, this.y, 2*this.r, 2*this.r);
+			this.r = radius;
+			this.count = 0;
+			this.display();
 		},
 		clicked: function() {
 			var d = dist(mouseX, mouseY, this.x, this.y);
 			if (d < this.r) {
 				city = 'austin';
-				this.r = this.r + 1;
+				this.count = this.count + 1;
+				if (this.r + 1 < 150)
+					this.r = this.r + 1;
 				this.display();
 			}
 		}
@@ -100,6 +151,7 @@ function draw() {
 		x: windowWidth/4-2*radius,
 		y: windowHeight/4-radius,
 		r: radius,
+		count: 0,
 		display: function () {
 			fill("orange");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
@@ -107,12 +159,23 @@ function draw() {
 			textSize(20);
 			textAlign(CENTER);
 			text("Denver", this.x, this.y);
+			if (this.count > 0)
+				text(this.count, this.x, this.y+20);
+		},
+		reset: function () {
+			fill("black");
+			ellipse(this.x, this.y, 2*this.r, 2*this.r);
+			this.r = radius;
+			this.count = 0;
+			this.display();
 		},
 		clicked: function() {
 			var d = dist(mouseX, mouseY, this.x, this.y);
 			if (d < this.r) {
 				city = 'denver';
-				this.r = this.r + 1;
+				this.count = this.count + 1;
+				if (this.r + 1 < 150)
+					this.r = this.r + 1;
 				this.display();
 			}
 		}
@@ -122,6 +185,7 @@ function draw() {
 		x: windowWidth*3/4+2*radius,
 		y: windowHeight/4-radius,
 		r: radius,
+		count: 0,
 		display: function () {
 			fill("grey");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
@@ -129,12 +193,23 @@ function draw() {
 			textSize(20);
 			textAlign(CENTER);
 			text("New Orleans", this.x, this.y);
+			if (this.count > 0)
+				text(this.count, this.x, this.y+20);
+		},
+		reset: function () {
+			fill("black");
+			ellipse(this.x, this.y, 2*this.r, 2*this.r);
+			this.r = radius;
+			this.count = 0;
+			this.display();
 		},
 		clicked: function() {
 			var d = dist(mouseX, mouseY, this.x, this.y);
 			if (d < this.r) {
 				city = 'neworleans';
-				this.r = this.r + 1;
+				this.count = this.count + 1;
+				if (this.r + 1 < 150)
+					this.r = this.r + 1;
 				this.display();
 			}
 		}
@@ -144,6 +219,7 @@ function draw() {
 		x: windowWidth/4-2*radius,
 		y: windowHeight*3/4+radius,
 		r: radius,
+		count: 0,
 		display: function () {
 			fill("green");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
@@ -151,12 +227,23 @@ function draw() {
 			textSize(20);
 			textAlign(CENTER);
 			text("Toronto", this.x, this.y);
+			if (this.count > 0)
+				text(this.count, this.x, this.y+20);
+		},
+		reset: function () {
+			fill("black");
+			ellipse(this.x, this.y, 2*this.r, 2*this.r);
+			this.r = radius;
+			this.count = 0;
+			this.display();
 		},
 		clicked: function() {
 			var d = dist(mouseX, mouseY, this.x, this.y);
 			if (d < this.r) {
 				city = 'toronto';
-				this.r = this.r + 1;
+				this.count = this.count + 1;
+				if (this.r + 1 < 150)
+					this.r = this.r + 1;
 				this.display();
 			}
 		}
@@ -166,6 +253,7 @@ function draw() {
 		x: windowWidth*3/4+2*radius,
 		y: windowHeight*3/4+radius,
 		r: radius,
+		count: 0,
 		display: function () {
 			fill("purple");
 			ellipse(this.x, this.y, 2*this.r, 2*this.r);
@@ -173,14 +261,43 @@ function draw() {
 			textSize(20);
 			textAlign(CENTER);
 			text("Ann Arbor", this.x, this.y);
+			if (this.count > 0)
+				text(this.count, this.x, this.y+20);
+		},
+		reset: function () {
+			fill("black");
+			ellipse(this.x, this.y, 2*this.r, 2*this.r);
+			this.r = radius;
+			this.count = 0;
+			this.display();
 		},
 		clicked: function() {
 			var d = dist(mouseX, mouseY, this.x, this.y);
 			if (d < this.r) {
 				city = 'annarbor';
-				this.r = this.r + 1;
+				this.count = this.count + 1;
+				if (this.r + 1 < 150)
+					this.r = this.r + 1;
 				this.display();
 			}
+		}
+	};
+
+	centerBox = {
+		x1: windowWidth/4,
+		y1: windowHeight/4,
+		x2: windowWidth/2,
+		y2: windowHeight/2,
+		display: function () {
+			fill("black");
+			rect(this.x1, this.y1, this.x2, this.y2);
+			fill("blue");
+			rect(this.x1, this.y1, this.x2, this.y2);
+			fill("orange");
+			textSize(30);
+			text("Click the CITY you want to visit next week.", windowWidth/2, windowHeight*5/16);
+			textSize(20);
+			text("See how many others other people want to do the same!", windowWidth/2, windowHeight*11/16);
 		}
 	};
 
@@ -197,8 +314,7 @@ function draw() {
 	toronto.display();
 	annarbor.display();
 
-	fill("blue");
-	rect(windowWidth/4,windowHeight/4,windowWidth/2,windowHeight/2);
+	centerBox.display();
 }
 
 function mousePressed() {
@@ -212,6 +328,24 @@ function mousePressed() {
 	annarbor.clicked();
 
 	updateWeather();
+
+	var newDate = new Date();
+	var newTime = newDate.getTime();
+
+	if (newTime - startTime > 60000*60*24*7) {
+		boston.reset();
+		portland.reset();
+		newyork.reset();
+		austin.reset();
+		denver.reset();
+		neworleans.reset();
+		toronto.reset();
+		annarbor.reset();
+
+		centerBox.display();
+
+		startTime = newTime;
+	}
 }
 	
 
